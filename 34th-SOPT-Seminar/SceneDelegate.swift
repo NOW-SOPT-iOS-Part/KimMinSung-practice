@@ -23,6 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         naviCon.navigationBar.tintColor = UIColor.dangGeunOrange
         self.window?.rootViewController = naviCon
         self.window?.makeKeyAndVisible()
+        print("hello world")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
