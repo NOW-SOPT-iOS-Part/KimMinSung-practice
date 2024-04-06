@@ -10,6 +10,8 @@ import UIKit
 
 extension UIColor {
     
+    
+    /// SOPT 짱
     class var dangGeunOrange: UIColor {
         return UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
     }
