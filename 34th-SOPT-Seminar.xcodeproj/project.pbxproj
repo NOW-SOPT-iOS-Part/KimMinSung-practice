@@ -28,6 +28,10 @@
 		4EAF3E6A2BC030CA00D53244 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF3E612BC030CA00D53244 /* Pretendard-Black.otf */; };
 		4EAF3E6B2BC030CA00D53244 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF3E622BC030CA00D53244 /* Pretendard-ExtraLight.otf */; };
 		4EAF3E6D2BC0329300D53244 /* ColorAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF3E6C2BC0329300D53244 /* ColorAssets.swift */; };
+		4EAF3E842BC114AD00D53244 /* LoginViewController_DelegatePatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF3E832BC114AD00D53244 /* LoginViewController_DelegatePatter.swift */; };
+		4EAF3E862BC114BF00D53244 /* WelcomeViewController_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF3E852BC114BF00D53244 /* WelcomeViewController_DelegatePattern.swift */; };
+		4EC0F1F92BC11BA300BCCC36 /* LonginViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0F1F82BC11BA300BCCC36 /* LonginViewController_Closure.swift */; };
+		4EC0F1FB2BC11BBA00BCCC36 /* WelcomeViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0F1FA2BC11BBA00BCCC36 /* WelcomeViewController_Closure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		4EAF3E612BC030CA00D53244 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		4EAF3E622BC030CA00D53244 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		4EAF3E6C2BC0329300D53244 /* ColorAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAssets.swift; sourceTree = "<group>"; };
+		4EAF3E832BC114AD00D53244 /* LoginViewController_DelegatePatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_DelegatePatter.swift; sourceTree = "<group>"; };
+		4EAF3E852BC114BF00D53244 /* WelcomeViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_DelegatePattern.swift; sourceTree = "<group>"; };
+		4EC0F1F82BC11BA300BCCC36 /* LonginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonginViewController_Closure.swift; sourceTree = "<group>"; };
+		4EC0F1FA2BC11BBA00BCCC36 /* WelcomeViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Closure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +135,11 @@
 				4EAF3E1C2BBFEE5900D53244 /* AppDelegate.swift */,
 				4EAF3E1E2BBFEE5900D53244 /* SceneDelegate.swift */,
 				4EAF3E4C2BBFF08200D53244 /* LoginViewController.swift */,
+				4EAF3E832BC114AD00D53244 /* LoginViewController_DelegatePatter.swift */,
+				4EC0F1F82BC11BA300BCCC36 /* LonginViewController_Closure.swift */,
 				4EAF3E4E2BC022B300D53244 /* WelcomeViewController.swift */,
+				4EAF3E852BC114BF00D53244 /* WelcomeViewController_DelegatePattern.swift */,
+				4EC0F1FA2BC11BBA00BCCC36 /* WelcomeViewController_Closure.swift */,
 				4EAF3E6C2BC0329300D53244 /* ColorAssets.swift */,
 				4EAF3E522BC029A800D53244 /* UIFontExtensions.swift */,
 				4EAF3E2A2BBFEE5B00D53244 /* Info.plist */,
@@ -311,6 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EAF3E842BC114AD00D53244 /* LoginViewController_DelegatePatter.swift in Sources */,
+				4EC0F1F92BC11BA300BCCC36 /* LonginViewController_Closure.swift in Sources */,
+				4EAF3E862BC114BF00D53244 /* WelcomeViewController_DelegatePattern.swift in Sources */,
+				4EC0F1FB2BC11BBA00BCCC36 /* WelcomeViewController_Closure.swift in Sources */,
 				4EAF3E6D2BC0329300D53244 /* ColorAssets.swift in Sources */,
 				4EAF3E4D2BBFF08200D53244 /* LoginViewController.swift in Sources */,
 				4EAF3E4F2BC022B300D53244 /* WelcomeViewController.swift in Sources */,
