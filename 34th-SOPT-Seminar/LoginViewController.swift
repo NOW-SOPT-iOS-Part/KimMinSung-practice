@@ -9,6 +9,21 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    private lazy var customInputAccessoryView: UIView = {
+        let bar = UIToolbar(frame: CGRect(origin: .zero, size: CGSize(width: 100, height: 100)))
+        let hideKeyboardButton = UIBarButtonItem(
+            image: UIImage(systemName: "keyboard.chevron.compact.down"),
+            style: .plain,
+            target: self,
+            action: #selector(keyboardHideButtonTapped)
+        )
+        hideKeyboardButton.tintColor = UIColor.dangGeunOrange
+        let flexibleBarButton = UIBarButtonItem(systemItem: UIBarButtonItem.SystemItem.flexibleSpace)
+        bar.items = [flexibleBarButton, hideKeyboardButton]
+        bar.sizeToFit()
+        return bar
+    }()
+    
     private let titleLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 69, y: 161, width: 236, height: 44))
         label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
@@ -26,6 +41,7 @@ class LoginViewController: UIViewController {
         textField.font = UIFont.pretendardFont(ofSize: 18, weight: 600) //semiBold
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         textField.borderStyle = .roundedRect
+        textField.inputAccessoryView = self.customInputAccessoryView
         return textField
     }()
 
@@ -35,6 +51,7 @@ class LoginViewController: UIViewController {
         textField.font = UIFont.pretendardFont(ofSize: 14, weight: 600) //semiBold
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         textField.borderStyle = .roundedRect
+        textField.inputAccessoryView = self.customInputAccessoryView
         return textField
     }()
 
