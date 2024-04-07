@@ -19,10 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: windowScene)
-        let naviCon = UINavigationController(rootViewController: LoginViewController_Delegate_Pattern())
-        naviCon.navigationBar.tintColor = UIColor.dangGeunOrange
+        let naviCon = UINavigationController(rootViewController: LoginViewController())
+        //naviCon.navigationBar.tintColor = UIColor.dangGeunOrange
         self.window?.rootViewController = naviCon
         self.window?.makeKeyAndVisible()
+        self.window?.tintColor = .dangGeunOrange
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

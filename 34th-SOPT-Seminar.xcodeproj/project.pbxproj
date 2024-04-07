@@ -30,8 +30,11 @@
 		4EAF3E6D2BC0329300D53244 /* ColorAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF3E6C2BC0329300D53244 /* ColorAssets.swift */; };
 		4EAF3E842BC114AD00D53244 /* LoginViewController_DelegatePatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF3E832BC114AD00D53244 /* LoginViewController_DelegatePatter.swift */; };
 		4EAF3E862BC114BF00D53244 /* WelcomeViewController_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF3E852BC114BF00D53244 /* WelcomeViewController_DelegatePattern.swift */; };
+		4EBD03832BC12CEE001A34ED /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD03822BC12CEE001A34ED /* UITextFieldExtensions.swift */; };
+		4EBD03852BC13232001A34ED /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBD03842BC13232001A34ED /* ScrollViewController.swift */; };
 		4EC0F1F92BC11BA300BCCC36 /* LonginViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0F1F82BC11BA300BCCC36 /* LonginViewController_Closure.swift */; };
 		4EC0F1FB2BC11BBA00BCCC36 /* WelcomeViewController_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC0F1FA2BC11BBA00BCCC36 /* WelcomeViewController_Closure.swift */; };
+		4EC0F1FF2BC1290200BCCC36 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4EC0F1FE2BC1290200BCCC36 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,8 @@
 		4EAF3E6C2BC0329300D53244 /* ColorAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAssets.swift; sourceTree = "<group>"; };
 		4EAF3E832BC114AD00D53244 /* LoginViewController_DelegatePatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_DelegatePatter.swift; sourceTree = "<group>"; };
 		4EAF3E852BC114BF00D53244 /* WelcomeViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_DelegatePattern.swift; sourceTree = "<group>"; };
+		4EBD03822BC12CEE001A34ED /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		4EBD03842BC13232001A34ED /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrollViewController.swift; path = "34th-SOPT-Seminar/ScrollViewController.swift"; sourceTree = SOURCE_ROOT; };
 		4EC0F1F82BC11BA300BCCC36 /* LonginViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LonginViewController_Closure.swift; sourceTree = "<group>"; };
 		4EC0F1FA2BC11BBA00BCCC36 /* WelcomeViewController_Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController_Closure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC0F1FF2BC1290200BCCC36 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,12 +146,14 @@
 				4EAF3E4E2BC022B300D53244 /* WelcomeViewController.swift */,
 				4EAF3E852BC114BF00D53244 /* WelcomeViewController_DelegatePattern.swift */,
 				4EC0F1FA2BC11BBA00BCCC36 /* WelcomeViewController_Closure.swift */,
+				4EBD03842BC13232001A34ED /* ScrollViewController.swift */,
 				4EAF3E6C2BC0329300D53244 /* ColorAssets.swift */,
 				4EAF3E522BC029A800D53244 /* UIFontExtensions.swift */,
 				4EAF3E2A2BBFEE5B00D53244 /* Info.plist */,
 				4EAF3E252BBFEE5B00D53244 /* Assets.xcassets */,
 				4EAF3E272BBFEE5B00D53244 /* LaunchScreen.storyboard */,
 				4EAF3E222BBFEE5900D53244 /* Main.storyboard */,
+				4EBD03822BC12CEE001A34ED /* UITextFieldExtensions.swift */,
 			);
 			path = "34th-SOPT-Seminar";
 			sourceTree = "<group>";
@@ -199,6 +207,9 @@
 			dependencies = (
 			);
 			name = "34th-SOPT-Seminar";
+			packageProductDependencies = (
+				4EC0F1FE2BC1290200BCCC36 /* SnapKit */,
+			);
 			productName = "34th-SOPT-Seminar";
 			productReference = 4EAF3E192BBFEE5900D53244 /* 34th-SOPT-Seminar.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +282,9 @@
 				Base,
 			);
 			mainGroup = 4EAF3E102BBFEE5900D53244;
+			packageReferences = (
+				4EC0F1FD2BC1290200BCCC36 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4EAF3E1A2BBFEE5900D53244 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -326,9 +340,11 @@
 				4EAF3E842BC114AD00D53244 /* LoginViewController_DelegatePatter.swift in Sources */,
 				4EC0F1F92BC11BA300BCCC36 /* LonginViewController_Closure.swift in Sources */,
 				4EAF3E862BC114BF00D53244 /* WelcomeViewController_DelegatePattern.swift in Sources */,
+				4EBD03832BC12CEE001A34ED /* UITextFieldExtensions.swift in Sources */,
 				4EC0F1FB2BC11BBA00BCCC36 /* WelcomeViewController_Closure.swift in Sources */,
 				4EAF3E6D2BC0329300D53244 /* ColorAssets.swift in Sources */,
 				4EAF3E4D2BBFF08200D53244 /* LoginViewController.swift in Sources */,
+				4EBD03852BC13232001A34ED /* ScrollViewController.swift in Sources */,
 				4EAF3E4F2BC022B300D53244 /* WelcomeViewController.swift in Sources */,
 				4EAF3E532BC029A800D53244 /* UIFontExtensions.swift in Sources */,
 				4EAF3E1D2BBFEE5900D53244 /* AppDelegate.swift in Sources */,
@@ -679,6 +695,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4EC0F1FD2BC1290200BCCC36 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4EC0F1FE2BC1290200BCCC36 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4EC0F1FD2BC1290200BCCC36 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4EAF3E112BBFEE5900D53244 /* Project object */;
 }

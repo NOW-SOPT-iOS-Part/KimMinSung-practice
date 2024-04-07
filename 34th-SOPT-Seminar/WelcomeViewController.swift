@@ -33,6 +33,7 @@ class WelcomeViewController: UIViewController {
         button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //Bold
         button.layer.cornerRadius = 10
         button.layer.cornerCurve = .continuous
+        button.addTarget(self, action: #selector(goHomeButtonTapped), for: UIControl.Event.touchUpInside)
         return button
     }()
 
@@ -67,6 +68,13 @@ class WelcomeViewController: UIViewController {
             self.view.addSubview($0)}
     }
 
+    @objc private func goHomeButtonTapped() {
+        let scrollVC = ScrollViewController()
+        scrollVC.modalPresentationStyle = .formSheet
+        self.present(scrollVC, animated: true)
+    }
+    
+    
     @objc private func backToLoginButtonDidTap() {
         
         if let _ = self.navigationController {
