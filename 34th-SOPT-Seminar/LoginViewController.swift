@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
 
     private lazy var loginButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 21, y: 422, width: 332, height: 58))
-        button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
+        button.backgroundColor = UIColor.dangGeunOrange
         button.setTitle("로그인하기", for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
         button.addTarget(self, action: #selector(loginButtonDidTap), for: UIControl.Event.touchUpInside)

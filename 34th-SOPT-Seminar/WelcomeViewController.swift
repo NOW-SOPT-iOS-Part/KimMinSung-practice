@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController {
 
     private var goHomeButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 20, y: 426, width: 335, height: 58))
-        button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
+        button.backgroundColor = UIColor.dangGeunOrange
         button.setTitle("메인으로", for: .normal)
         button.setTitleColor(.white, for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
