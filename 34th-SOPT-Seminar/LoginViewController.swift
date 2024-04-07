@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 2
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
         label.clipsToBounds = true
         return label
     }()
@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
     private lazy var idTextField: UITextField = {
         let textField = UITextField(frame: CGRect(x: 20, y: 276, width: 335, height: 52))
         textField.placeholder = "아이디를 입력해주세요"
-        textField.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        textField.font = UIFont.pretendardFont(ofSize: 18, weight: 600) //semiBold
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         return textField
     }()
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField(frame: CGRect(x: 20, y: 335, width: 335, height: 52))
         textField.placeholder = "비밀번호를 입력해주세요"
-        textField.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        textField.font = UIFont.pretendardFont(ofSize: 14, weight: 600) //semiBold
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         return textField
     }()
@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
         let button = UIButton(frame: CGRect(x: 21, y: 422, width: 332, height: 58))
         button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
         button.setTitle("로그인하기", for: UIControl.State.normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
         button.addTarget(self, action: #selector(loginButtonDidTap), for: UIControl.Event.touchUpInside)
         return button
     }()
