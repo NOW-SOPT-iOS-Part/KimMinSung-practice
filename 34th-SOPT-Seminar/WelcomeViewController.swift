@@ -31,6 +31,7 @@ class WelcomeViewController: UIViewController {
         button.setTitle("메인으로", for: .normal)
         button.setTitleColor(.white, for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
+        button.clipsToBounds = true
         button.layer.cornerRadius = 10
         button.layer.cornerCurve = .continuous
         return button
@@ -46,6 +47,7 @@ class WelcomeViewController: UIViewController {
         )
         button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
         button.addTarget(self, action: #selector(backToLoginButtonDidTap), for: UIControl.Event.touchUpInside)
+        button.clipsToBounds = true
         button.layer.cornerRadius = 10
         button.layer.cornerCurve = .continuous
         return button
