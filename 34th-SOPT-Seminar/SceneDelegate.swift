@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         let naviCon = UINavigationController(rootViewController: LoginViewController())
-        naviCon.navigationBar.tintColor = UIColor.dangGeunOrange
+        naviCon.navigationBar.tintColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
         self.window?.rootViewController = naviCon
         self.window?.makeKeyAndVisible()
     }
