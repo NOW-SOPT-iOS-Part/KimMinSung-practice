@@ -23,6 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         naviCon.navigationBar.tintColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
         self.window?.rootViewController = naviCon
         self.window?.makeKeyAndVisible()
+        self.window?.tintColor = UIColor.dangGeunOrange //테마 색 변경
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
