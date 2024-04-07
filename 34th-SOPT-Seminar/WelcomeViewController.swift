@@ -19,7 +19,7 @@ class WelcomeViewController: UIViewController {
     private let welcomeLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 140, y: 295, width: 95, height: 60))
         label.text = "??님\n반가워요!"
-        label.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
+        label.font = UIFont.pretendardFont(ofSize: 25, weight: 800) //extraBold
         label.textAlignment = .center
         label.numberOfLines = 2
         return label
@@ -27,10 +27,11 @@ class WelcomeViewController: UIViewController {
 
     private var goHomeButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 20, y: 426, width: 335, height: 58))
-        button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
+        button.backgroundColor = UIColor.dangGeunOrange
         button.setTitle("메인으로", for: .normal)
         button.setTitleColor(.white, for: UIControl.State.normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
+        button.clipsToBounds = true
         button.layer.cornerRadius = 10
         button.layer.cornerCurve = .continuous
         return button
@@ -44,8 +45,9 @@ class WelcomeViewController: UIViewController {
             UIColor(red: 172/255, green: 176/255, blue: 185/255, alpha: 1),
             for: UIControl.State.normal
         )
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
         button.addTarget(self, action: #selector(backToLoginButtonDidTap), for: UIControl.Event.touchUpInside)
+        button.clipsToBounds = true
         button.layer.cornerRadius = 10
         button.layer.cornerCurve = .continuous
         return button
