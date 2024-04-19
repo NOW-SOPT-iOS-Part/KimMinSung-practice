@@ -19,8 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: windowScene)
-        self.window?.rootViewController = ViewController()
+        
+        let naviCon = UINavigationController(rootViewController: LoginViewController())
+        self.window?.rootViewController = naviCon
         self.window?.makeKeyAndVisible()
+        self.window?.tintColor = .dangGeunOrange
         
     }
 
