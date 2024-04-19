@@ -16,6 +16,7 @@
 		4E036E322BD23CAA0017A9BF /* _4th_SOPT_iOS_DanggeunCloneCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E036E312BD23CAA0017A9BF /* _4th_SOPT_iOS_DanggeunCloneCodingTests.swift */; };
 		4E036E3C2BD23CAA0017A9BF /* _4th_SOPT_iOS_DanggeunCloneCodingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E036E3B2BD23CAA0017A9BF /* _4th_SOPT_iOS_DanggeunCloneCodingUITests.swift */; };
 		4E036E3E2BD23CAA0017A9BF /* _4th_SOPT_iOS_DanggeunCloneCodingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E036E3D2BD23CAA0017A9BF /* _4th_SOPT_iOS_DanggeunCloneCodingUITestsLaunchTests.swift */; };
+		4E036E802BD2AC640017A9BF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4E036E7F2BD2AC640017A9BF /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4E036E372BD23CAA0017A9BF /* 34th-SOPT-iOS-DanggeunCloneCodingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "34th-SOPT-iOS-DanggeunCloneCodingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E036E3B2BD23CAA0017A9BF /* _4th_SOPT_iOS_DanggeunCloneCodingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4th_SOPT_iOS_DanggeunCloneCodingUITests.swift; sourceTree = "<group>"; };
 		4E036E3D2BD23CAA0017A9BF /* _4th_SOPT_iOS_DanggeunCloneCodingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4th_SOPT_iOS_DanggeunCloneCodingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4E036E7F2BD2AC640017A9BF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				4E036E232BD23CAA0017A9BF /* Assets.xcassets */,
 				4E036E252BD23CAA0017A9BF /* LaunchScreen.storyboard */,
 				4E036E282BD23CAA0017A9BF /* Info.plist */,
+				4E036E7F2BD2AC640017A9BF /* .gitignore */,
 			);
 			path = "34th-SOPT-iOS-DanggeunCloneCoding";
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E036E802BD2AC640017A9BF /* .gitignore in Resources */,
 				4E036E272BD23CAA0017A9BF /* LaunchScreen.storyboard in Resources */,
 				4E036E242BD23CAA0017A9BF /* Assets.xcassets in Resources */,
 				4E036E222BD23CA80017A9BF /* Main.storyboard in Resources */,
