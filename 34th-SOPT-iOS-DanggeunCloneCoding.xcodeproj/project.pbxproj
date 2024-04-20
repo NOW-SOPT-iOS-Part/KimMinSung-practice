@@ -137,20 +137,18 @@
 		4E036E192BD23CA80017A9BF /* 34th-SOPT-iOS-DanggeunCloneCoding */ = {
 			isa = PBXGroup;
 			children = (
+				4E036EAC2BD395A50017A9BF /* ChatView */,
+				4E036EAB2BD3959B0017A9BF /* WelcomeView */,
+				4E036EAA2BD395860017A9BF /* LoginView */,
 				4E036E7F2BD2AC640017A9BF /* .gitignore */,
 				4E036E902BD2AEF90017A9BF /* PretendardFont */,
 				4E036E1A2BD23CA80017A9BF /* AppDelegate.swift */,
 				4E036E1C2BD23CA80017A9BF /* SceneDelegate.swift */,
-				4E036E892BD2AEA40017A9BF /* LoginViewController.swift */,
-				4E036EA42BD389990017A9BF /* LoginView.swift */,
 				4E036E8B2BD2AEC00017A9BF /* ColorAssets.swift */,
 				4E036E1E2BD23CA80017A9BF /* ViewController.swift */,
-				4E036E812BD2AE240017A9BF /* WelcomeViewController.swift */,
 				4E036E832BD2AE460017A9BF /* UITextFieldExtensions.swift */,
 				4E036E852BD2AE600017A9BF /* UIFontExtension.swift */,
 				4E036E872BD2AE740017A9BF /* ScrollViewController.swift */,
-				4E036EA62BD38CE50017A9BF /* ChatViewController.swift */,
-				4E036EA82BD38D840017A9BF /* ChatTableViewCell.swift */,
 				4E036E232BD23CAA0017A9BF /* Assets.xcassets */,
 				4E036E252BD23CAA0017A9BF /* LaunchScreen.storyboard */,
 				4E036E282BD23CAA0017A9BF /* Info.plist */,
@@ -189,6 +187,32 @@
 				4E036E932BD2AF0A0017A9BF /* Pretendard-Black.otf */,
 			);
 			path = PretendardFont;
+			sourceTree = "<group>";
+		};
+		4E036EAA2BD395860017A9BF /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				4E036E892BD2AEA40017A9BF /* LoginViewController.swift */,
+				4E036EA42BD389990017A9BF /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		4E036EAB2BD3959B0017A9BF /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				4E036E812BD2AE240017A9BF /* WelcomeViewController.swift */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		4E036EAC2BD395A50017A9BF /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				4E036EA62BD38CE50017A9BF /* ChatViewController.swift */,
+				4E036EA82BD38D840017A9BF /* ChatTableViewCell.swift */,
+			);
+			path = ChatView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
