@@ -8,9 +8,19 @@
 import UIKit
 import SnapKit
 
-class ChatTableViewCell: UITableViewCell {
+final class ChatTableViewCell: UITableViewCell {
     
-    private let profileImageView = UIImageView()
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+    
+    private let profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 20
+        return imageView
+    }()
     
     private let nameLabel: UILabel = {
         let label = UILabel()
@@ -40,6 +50,9 @@ class ChatTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.setViewHierarchy()
+        self.setLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -53,9 +66,11 @@ class ChatTableViewCell: UITableViewCell {
     }
     
     private func setLayout() {
-        self.profileImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(16)
-            make.size.equalTo(40)
+        self.profileImageView.snp.makeConstraints { view in
+            view.top.equalToSuperview().offset(16)
+            view.leading.equalToSuperview().offset(16)
+            view.bottom.equalToSuperview().offset(-16)
+            view.size.equalTo(40)
         }
         
         self.nameLabel.snp.makeConstraints { make in
@@ -79,5 +94,14 @@ class ChatTableViewCell: UITableViewCell {
         }
     }
     
+    
+    //더미데이터 만들기용...후에 삭제 예정
+    func makeDummyData() {
+        self.profileImageView.image = UIImage(systemName: "person.circle")
+        self.nameLabel.text = "김민성"
+        self.placeLabel.text = "추계예때"
+        self.chatLabel.text = "안녕! 나 98년생 민성!"
+        self.itemImageView.image = UIImage(systemName: "shippingbox")
+    }
     
 }
