@@ -35,6 +35,10 @@
 		4E036EA52BD389990017A9BF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E036EA42BD389990017A9BF /* LoginView.swift */; };
 		4E036EA72BD38CE50017A9BF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E036EA62BD38CE50017A9BF /* ChatViewController.swift */; };
 		4E036EA92BD38D840017A9BF /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E036EA82BD38D840017A9BF /* ChatTableViewCell.swift */; };
+		4E6953BD2BD39D8C00282A6D /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6953BC2BD39D8C00282A6D /* ChatModel.swift */; };
+		4E6953C02BD3A49700282A6D /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6953BF2BD3A49700282A6D /* ItemViewController.swift */; };
+		4E6953C22BD3A85E00282A6D /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6953C12BD3A85E00282A6D /* ItemCollectionViewCell.swift */; };
+		4E6953C42BD3B4AE00282A6D /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6953C32BD3B4AE00282A6D /* ItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		4E036EA42BD389990017A9BF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4E036EA62BD38CE50017A9BF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		4E036EA82BD38D840017A9BF /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		4E6953BC2BD39D8C00282A6D /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		4E6953BF2BD3A49700282A6D /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		4E6953C12BD3A85E00282A6D /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E6953C32BD3B4AE00282A6D /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,7 @@
 		4E036E192BD23CA80017A9BF /* 34th-SOPT-iOS-DanggeunCloneCoding */ = {
 			isa = PBXGroup;
 			children = (
+				4E6953BE2BD3A48500282A6D /* ItemView */,
 				4E036EAC2BD395A50017A9BF /* ChatView */,
 				4E036EAB2BD3959B0017A9BF /* WelcomeView */,
 				4E036EAA2BD395860017A9BF /* LoginView */,
@@ -152,6 +161,8 @@
 				4E036E232BD23CAA0017A9BF /* Assets.xcassets */,
 				4E036E252BD23CAA0017A9BF /* LaunchScreen.storyboard */,
 				4E036E282BD23CAA0017A9BF /* Info.plist */,
+				4E6953BC2BD39D8C00282A6D /* ChatModel.swift */,
+				4E6953C32BD3B4AE00282A6D /* ItemModel.swift */,
 			);
 			path = "34th-SOPT-iOS-DanggeunCloneCoding";
 			sourceTree = "<group>";
@@ -213,6 +224,15 @@
 				4E036EA82BD38D840017A9BF /* ChatTableViewCell.swift */,
 			);
 			path = ChatView;
+			sourceTree = "<group>";
+		};
+		4E6953BE2BD3A48500282A6D /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				4E6953BF2BD3A49700282A6D /* ItemViewController.swift */,
+				4E6953C12BD3A85E00282A6D /* ItemCollectionViewCell.swift */,
+			);
+			path = ItemView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6953C22BD3A85E00282A6D /* ItemCollectionViewCell.swift in Sources */,
 				4E036E1F2BD23CA80017A9BF /* ViewController.swift in Sources */,
 				4E036E822BD2AE240017A9BF /* WelcomeViewController.swift in Sources */,
 				4E036EA72BD38CE50017A9BF /* ChatViewController.swift in Sources */,
@@ -368,10 +389,13 @@
 				4E036E882BD2AE740017A9BF /* ScrollViewController.swift in Sources */,
 				4E036E8A2BD2AEA40017A9BF /* LoginViewController.swift in Sources */,
 				4E036E1B2BD23CA80017A9BF /* AppDelegate.swift in Sources */,
+				4E6953C02BD3A49700282A6D /* ItemViewController.swift in Sources */,
 				4E036E8C2BD2AEC00017A9BF /* ColorAssets.swift in Sources */,
+				4E6953C42BD3B4AE00282A6D /* ItemModel.swift in Sources */,
 				4E036E862BD2AE600017A9BF /* UIFontExtension.swift in Sources */,
 				4E036EA92BD38D840017A9BF /* ChatTableViewCell.swift in Sources */,
 				4E036EA52BD389990017A9BF /* LoginView.swift in Sources */,
+				4E6953BD2BD39D8C00282A6D /* ChatModel.swift in Sources */,
 				4E036E1D2BD23CA80017A9BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

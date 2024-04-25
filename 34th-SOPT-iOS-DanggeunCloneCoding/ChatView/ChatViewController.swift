@@ -16,6 +16,8 @@ class ChatViewController: UIViewController {
         return tableView
     }()
     
+    private let chatList = ChatModel.dummy()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,7 +54,7 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.chatList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,10 +63,9 @@ extension ChatViewController: UITableViewDataSource {
             withIdentifier: ChatTableViewCell.reuseIdentifier,
             for: indexPath
         ) as? ChatTableViewCell else { return UITableViewCell() }
-        cell.makeDummyData()
+        cell.dataBind(self.chatList[indexPath.row])
         return cell
     }
-    
     
 }
 
