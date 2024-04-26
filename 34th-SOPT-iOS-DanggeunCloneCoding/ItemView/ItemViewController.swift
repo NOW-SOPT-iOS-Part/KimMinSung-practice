@@ -38,6 +38,38 @@ class ItemViewController: UIViewController {
         return collectionView
     }()
     
+    lazy var alarmBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(
+            image: .icAlarm,
+            style: UIBarButtonItem.Style.plain,
+            target: self,
+            action: #selector(barButtonItemDidTapped)
+        )
+        barButtonItem.tag = 0
+        return barButtonItem
+    }()
+    
+    lazy var menuBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(
+            image: .menu,
+            style: UIBarButtonItem.Style.plain,
+            target: self,
+            action: #selector(barButtonItemDidTapped)
+        )
+        barButtonItem.tag = 1
+        return barButtonItem
+    }()
+    
+    lazy var searchBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(
+            image: .icSearch,
+            style: UIBarButtonItem.Style.plain,
+            target: self,
+            action: #selector(barButtonItemDidTapped)
+        )
+        barButtonItem.tag = 2
+        return barButtonItem
+    }()
     
     
     override func viewDidLoad() {
@@ -49,6 +81,7 @@ class ItemViewController: UIViewController {
         self.setLayout()
         self.setDelegate()
         self.setCollectionViewLayout()
+        self.setNaviBarButtons()
     }
     
     
@@ -81,6 +114,22 @@ class ItemViewController: UIViewController {
         self.collectionView.contentInset = self.carrotInset
     }
     
+    private func setNaviBarButtons() {
+        self.navigationItem.rightBarButtonItems = [self.alarmBarButtonItem, self.menuBarButtonItem, self.searchBarButtonItem]
+    }
+    
+    @objc private func barButtonItemDidTapped(sender: UIBarButtonItem) {
+        switch sender.tag {
+        case 0:
+            print("alarmBarButtonTapped")
+        case 1:
+            print("menuBarButtonTapped")
+        case 2:
+            print("searchBarButtonTapped")
+        default:
+            return
+        }
+    }
 }
 
 extension ItemViewController: UICollectionViewDataSource {

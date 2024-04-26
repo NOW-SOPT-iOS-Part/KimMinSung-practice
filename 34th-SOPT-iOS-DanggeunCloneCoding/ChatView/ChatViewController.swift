@@ -9,23 +9,44 @@ import UIKit
 
 class ChatViewController: UIViewController {
     
-    //private let tableView = UITableView(frame: .zero, style: UITableView.Style.plain)
+    
+    private let chatList = ChatModel.dummy()
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.reuseIdentifier)
         return tableView
     }()
     
-    private let chatList = ChatModel.dummy()
+    lazy var alarmBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(
+            image: .icAlarm,
+            style: UIBarButtonItem.Style.plain,
+            target: self,
+            action: #selector(barButtonItemDidTapped)
+        )
+        barButtonItem.tag = 0
+        return barButtonItem
+    }()
+    
+    lazy var scanQRBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(
+            image: .vector,
+            style: UIBarButtonItem.Style.plain,
+            target: self,
+            action: #selector(barButtonItemDidTapped)
+        )
+        barButtonItem.tag = 1
+        return barButtonItem
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.tableView.backgroundColor = .dangGeunOrange
         self.setViewHierarchy()
         self.setLayout()
-        
         self.setDelegate()
+        self.setNaviBarButtons()
     }
     
     private func setViewHierarchy() {
@@ -43,7 +64,20 @@ class ChatViewController: UIViewController {
         self.tableView.delegate = self
     }
     
+    private func setNaviBarButtons() {
+        self.navigationItem.rightBarButtonItems = [self.alarmBarButtonItem, self.scanQRBarButtonItem ]
+    }
     
+    @objc private func barButtonItemDidTapped(sender: UIBarButtonItem) {
+        switch sender.tag {
+        case 0:
+            print("alarmBarButtonDidTapped")
+        case 1:
+            print("scanQRBarButtonDidTapped")
+        default:
+            return
+        }
+    }
 }
 
 
