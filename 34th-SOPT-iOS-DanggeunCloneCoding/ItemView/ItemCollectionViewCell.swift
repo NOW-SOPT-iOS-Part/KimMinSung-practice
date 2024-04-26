@@ -21,7 +21,12 @@ final class ItemCollectionViewCell: UICollectionViewCell {
     
     weak var delegate: ItemCollectionViewCellDelegate?
     
-    private let itemImageView = UIImageView()
+    private let itemImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
     
     private let nameLabel: UILabel = {
         let label = UILabel()
