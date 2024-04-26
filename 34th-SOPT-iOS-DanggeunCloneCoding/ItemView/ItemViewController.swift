@@ -44,9 +44,10 @@ class ItemViewController: UIViewController {
         
         self.view.backgroundColor = .white
         
-        self.register()
         self.setViewHierarchy()
         self.setLayout()
+        self.register()
+        self.setDelegate()
         self.setCollectionViewLayout()
     }
     
@@ -82,6 +83,7 @@ class ItemViewController: UIViewController {
         flowLayout.minimumLineSpacing = self.carrotLineSpacing
         flowLayout.minimumInteritemSpacing = self.carrotInterLineSpacing
         self.collectionView.setCollectionViewLayout(flowLayout, animated: false)
+        self.collectionView.contentInset = self.carrotInset
     }
     
 }

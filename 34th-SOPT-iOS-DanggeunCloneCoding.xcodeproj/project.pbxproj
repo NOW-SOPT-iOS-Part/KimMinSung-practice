@@ -145,10 +145,6 @@
 		4E036E192BD23CA80017A9BF /* 34th-SOPT-iOS-DanggeunCloneCoding */ = {
 			isa = PBXGroup;
 			children = (
-				4E6953BE2BD3A48500282A6D /* ItemView */,
-				4E036EAC2BD395A50017A9BF /* ChatView */,
-				4E036EAB2BD3959B0017A9BF /* WelcomeView */,
-				4E036EAA2BD395860017A9BF /* LoginView */,
 				4E036E7F2BD2AC640017A9BF /* .gitignore */,
 				4E036E902BD2AEF90017A9BF /* PretendardFont */,
 				4E036E1A2BD23CA80017A9BF /* AppDelegate.swift */,
@@ -158,11 +154,15 @@
 				4E036E832BD2AE460017A9BF /* UITextFieldExtensions.swift */,
 				4E036E852BD2AE600017A9BF /* UIFontExtension.swift */,
 				4E036E872BD2AE740017A9BF /* ScrollViewController.swift */,
+				4E6953BC2BD39D8C00282A6D /* ChatModel.swift */,
+				4E6953C32BD3B4AE00282A6D /* ItemModel.swift */,
+				4E6953BE2BD3A48500282A6D /* ItemView */,
+				4E036EAC2BD395A50017A9BF /* ChatView */,
+				4E036EAB2BD3959B0017A9BF /* WelcomeView */,
+				4E036EAA2BD395860017A9BF /* LoginView */,
 				4E036E232BD23CAA0017A9BF /* Assets.xcassets */,
 				4E036E252BD23CAA0017A9BF /* LaunchScreen.storyboard */,
 				4E036E282BD23CAA0017A9BF /* Info.plist */,
-				4E6953BC2BD39D8C00282A6D /* ChatModel.swift */,
-				4E6953C32BD3B4AE00282A6D /* ItemModel.swift */,
 			);
 			path = "34th-SOPT-iOS-DanggeunCloneCoding";
 			sourceTree = "<group>";
