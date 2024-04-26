@@ -34,6 +34,7 @@ class ItemViewController: UIViewController {
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: ItemCollectionViewCell.reuseIdentifier)
         return collectionView
     }()
     
@@ -46,7 +47,6 @@ class ItemViewController: UIViewController {
         
         self.setViewHierarchy()
         self.setLayout()
-        self.register()
         self.setDelegate()
         self.setCollectionViewLayout()
     }
@@ -60,11 +60,6 @@ class ItemViewController: UIViewController {
         self.collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-    }
-    
-    
-    private func register() {
-        self.collectionView.register(ItemCollectionViewCell.self, forCellWithReuseIdentifier: ItemCollectionViewCell.reuseIdentifier)
     }
     
     private func setDelegate() {
