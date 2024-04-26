@@ -101,6 +101,7 @@ extension ItemViewController: UICollectionViewDataSource {
         ) as? ItemCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.delegate = self
         cell.dataBind(itemData[indexPath.item], itemRow: indexPath.item)
         
         return cell
@@ -111,4 +112,13 @@ extension ItemViewController: UICollectionViewDataSource {
 
 extension ItemViewController: UICollectionViewDelegate {
     
+}
+
+
+extension ItemViewController: ItemCollectionViewCellDelegate {
+    
+    func heartButtonDidTapEvent(state: Bool, row: Int) {
+        print(#function)
+        self.itemData[row].heartIsSelected = state
+    }
 }
