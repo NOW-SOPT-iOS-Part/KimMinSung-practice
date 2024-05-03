@@ -1,17 +1,17 @@
 //
-//  LoginViewController.swift
+//  LoginView.swift
 //  34th-SOPT-iOS-DanggeunCloneCoding
 //
-//  Created by 김민성 on 2024/04/19.
+//  Created by 김민성 on 2024/04/20.
 //
 
 import UIKit
 import SnapKit
 
 
-class LoginViewController: UIViewController {
-
-    private lazy var customInputAccessoryView: UIView = {
+final class LoginView: UIView {
+    
+    lazy var customInputAccessoryView: UIView = {
         let bar = UIToolbar(frame: CGRect(origin: .zero, size: CGSize(width: 100, height: 100)))
         let hideKeyboardButton = UIBarButtonItem(
             image: UIImage(systemName: "keyboard.chevron.compact.down"),
@@ -19,6 +19,9 @@ class LoginViewController: UIViewController {
             target: self,
             action: #selector(keyboardHideButtonTapped)
         )
+//        let hideKeyboardButton = UIBarButtonItem(
+//            customView: UIImageView(image: UIImage(named: "keyboard.chevron.compact.down"))
+//        )
         hideKeyboardButton.tintColor = UIColor.dangGeunOrange
         let flexibleBarButton = UIBarButtonItem(systemItem: UIBarButtonItem.SystemItem.flexibleSpace)
         bar.items = [flexibleBarButton, hideKeyboardButton]
@@ -26,7 +29,7 @@ class LoginViewController: UIViewController {
         return bar
     }()
     
-    private let titleLabel: UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
         label.textColor = .black
@@ -37,7 +40,7 @@ class LoginViewController: UIViewController {
         return label
     }()
 
-    private lazy var idTextField: UITextField = {
+    lazy var idTextField: UITextField = {
         let tf = UITextField()
         tf.addLeftPadding()
         tf.placeholder = "아이디를 입력해주세요"
@@ -50,7 +53,7 @@ class LoginViewController: UIViewController {
         return tf
     }()
 
-    private lazy var passwordTextField: UITextField = {
+    lazy var passwordTextField: UITextField = {
         let tf = UITextField()
         tf.addLeftPadding()
         tf.placeholder = "비밀번호를 입력해주세요"
@@ -64,33 +67,36 @@ class LoginViewController: UIViewController {
         return tf
     }()
 
-    private lazy var loginButton: UIButton = {
+    lazy var loginButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor.dangGeunOrange
         button.setTitle("로그인하기", for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
-        button.addTarget(self, action: #selector(loginButtonDidTap), for: UIControl.Event.touchUpInside)
         button.clipsToBounds = true
         button.layer.cornerRadius = 13
         button.layer.cornerCurve = .continuous
         return button
     }()
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
         self.setupUI()
         self.configureHierarchy()
         self.setLayout()
     }
-
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     private func setupUI() {
-        self.view.backgroundColor = .systemBackground
+        self.backgroundColor = .systemBackground
     }
 
     private func configureHierarchy() {
-        [titleLabel, idTextField, passwordTextField, loginButton].forEach { self.view.addSubview($0) }
+        [titleLabel, idTextField, passwordTextField, loginButton].forEach { self.addSubview($0) }
     }
     
     
@@ -153,31 +159,8 @@ class LoginViewController: UIViewController {
          */
     }
     
-    
-    
-    @objc private func loginButtonDidTap() {
-        self.view.endEditing(true)
-        //self.presentToWelcomeVC()
-        self.pushToWelcomeVC()
-    }
-
     @objc private func keyboardHideButtonTapped() {
-        self.view.endEditing(true)
+        self.endEditing(true)
     }
-
-
-    private func presentToWelcomeVC() {
-        let welcomeViewController = WelcomeViewController()
-        welcomeViewController.modalPresentationStyle = .formSheet
-        welcomeViewController.id = self.idTextField.text
-        self.present(welcomeViewController, animated: true)
-    }
-
-
-    private func pushToWelcomeVC() {
-        let welcomeViewController = WelcomeViewController()
-        welcomeViewController.id = self.idTextField.text
-        self.navigationController?.pushViewController(welcomeViewController, animated: true)
-    }
-
+    
 }
