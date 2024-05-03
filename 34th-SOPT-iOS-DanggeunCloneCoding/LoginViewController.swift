@@ -75,6 +75,18 @@ class LoginViewController: UIViewController {
         button.layer.cornerCurve = .continuous
         return button
     }()
+    
+    private lazy var signUpButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor.dangGeunOrange
+        button.setTitle("회원가입하기", for: UIControl.State.normal)
+        button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
+        button.addTarget(self, action: #selector(signUpButtonDidTap), for: UIControl.Event.touchUpInside)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 13
+        button.layer.cornerCurve = .continuous
+        return button
+    }()
 
 
     override func viewDidLoad() {
@@ -90,7 +102,7 @@ class LoginViewController: UIViewController {
     }
 
     private func configureHierarchy() {
-        [titleLabel, idTextField, passwordTextField, loginButton].forEach { self.view.addSubview($0) }
+        [titleLabel, idTextField, passwordTextField, loginButton, signUpButton].forEach { self.view.addSubview($0) }
     }
     
     
@@ -125,6 +137,12 @@ class LoginViewController: UIViewController {
             btn.height.equalTo(58)
         }
         
+        self.signUpButton.snp.makeConstraints { btn in
+            btn.centerX.equalToSuperview()
+            btn.top.equalTo(self.loginButton.snp.bottom).offset(30)
+            btn.width.equalTo(335)
+            btn.height.equalTo(58)
+        }
         /*
         NSLayoutConstraint.activate(
             
@@ -153,12 +171,20 @@ class LoginViewController: UIViewController {
          */
     }
     
-    
-    
     @objc private func loginButtonDidTap() {
         self.view.endEditing(true)
+        
+        /*
+         서버에 회원정보 있는지 요청하는 기능을 구현할 경우, 여기에서 코드 작성 후, 예외처리
+         */
+        
         //self.presentToWelcomeVC()
         self.pushToWelcomeVC()
+    }
+    
+    @objc private func signUpButtonDidTap() {
+        self.view.endEditing(true)
+        self.pushToSignUpVC()
     }
 
     @objc private func keyboardHideButtonTapped() {
@@ -178,6 +204,11 @@ class LoginViewController: UIViewController {
         let welcomeViewController = WelcomeViewController()
         welcomeViewController.id = self.idTextField.text
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
+    }
+    
+    private func pushToSignUpVC() {
+        let signUpVC = SignUpViewController()
+        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
 
 }
