@@ -71,9 +71,11 @@ class WelcomeViewController: UIViewController {
     }
 
     @objc private func goHomeButtonTapped() {
-        let scrollVC = ScrollViewController()
-        scrollVC.modalPresentationStyle = .formSheet
-        self.present(scrollVC, animated: true)
+        //let scrollVC = ScrollViewController()
+        //scrollVC.modalPresentationStyle = .formSheet
+        //self.present(scrollVC, animated: true)
+        let chatVC = ChatViewController()
+        self.navigationController?.pushViewController(chatVC, animated: true)
     }
     
     
