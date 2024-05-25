@@ -32,6 +32,7 @@
 		4E036EA02BD2AF500017A9BF /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E036E952BD2AF0A0017A9BF /* Pretendard-ExtraBold.otf */; };
 		4E036EA12BD2AF500017A9BF /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E036E922BD2AF0A0017A9BF /* Pretendard-Bold.otf */; };
 		4E036EA22BD2AF500017A9BF /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E036E962BD2AF0B0017A9BF /* Pretendard-Light.otf */; };
+		4ED0589A2C01BD6400F5680E /* LoginViewController_DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED058992C01BD6400F5680E /* LoginViewController_DI.swift */; };
 		4ED9F3D62BDCC52300712737 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED9F3D52BDCC52300712737 /* Moya */; };
 		4ED9F3D82BDCCBD600712737 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9F3D72BDCCBD600712737 /* Config.swift */; };
 		4ED9F3DA2BDCCF3800712737 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9F3D92BDCCF3800712737 /* NetworkResult.swift */; };
@@ -92,6 +93,7 @@
 		4E036E972BD2AF0B0017A9BF /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		4E036E982BD2AF0B0017A9BF /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		4E036E992BD2AF0B0017A9BF /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		4ED058992C01BD6400F5680E /* LoginViewController_DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_DI.swift; sourceTree = "<group>"; };
 		4ED9F3D72BDCCBD600712737 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4ED9F3D92BDCCF3800712737 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		4ED9F3DB2BDCCF6300712737 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		4E036E192BD23CA80017A9BF /* 34th-SOPT-iOS-DanggeunCloneCoding */ = {
 			isa = PBXGroup;
 			children = (
+				4ED058982C01BD4600F5680E /* 7th-Seminar */,
 				4E036E7F2BD2AC640017A9BF /* .gitignore */,
 				4E036E902BD2AEF90017A9BF /* PretendardFont */,
 				4E036E1A2BD23CA80017A9BF /* AppDelegate.swift */,
@@ -212,6 +215,14 @@
 				4E036E932BD2AF0A0017A9BF /* Pretendard-Black.otf */,
 			);
 			path = PretendardFont;
+			sourceTree = "<group>";
+		};
+		4ED058982C01BD4600F5680E /* 7th-Seminar */ = {
+			isa = PBXGroup;
+			children = (
+				4ED058992C01BD6400F5680E /* LoginViewController_DI.swift */,
+			);
+			path = "7th-Seminar";
 			sourceTree = "<group>";
 		};
 		4ED9F3EE2BDCD7BF00712737 /* Networking */ = {
@@ -393,6 +404,7 @@
 				4ED9F3E72BDCD0EA00712737 /* UserTargetType.swift in Sources */,
 				4E036E8A2BD2AEA40017A9BF /* LoginViewController.swift in Sources */,
 				4ED9F3DC2BDCCF6300712737 /* MoyaLoggingPlugin.swift in Sources */,
+				4ED0589A2C01BD6400F5680E /* LoginViewController_DI.swift in Sources */,
 				4ED9F3E22BDCD00200712737 /* SignUpViewController.swift in Sources */,
 				4E036E1B2BD23CA80017A9BF /* AppDelegate.swift in Sources */,
 				4E036E8C2BD2AEC00017A9BF /* ColorAssets.swift in Sources */,
