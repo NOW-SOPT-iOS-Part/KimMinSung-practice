@@ -20,6 +20,10 @@ final class LoginViewModel_Rx: ViewModelType {
     }
     
     struct Output {
+        
+        /*
+         isValid와 errMessage는 output으로서, 초깃값을 가지지 않아도 된다. -> PublishSubject 또는 PublishRelay로 구현
+         */
         var isValid = PublishRelay<Void>()
         var errMessage = PublishRelay<String>()
     }

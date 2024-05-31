@@ -12,13 +12,13 @@ import SnapKit
 final class LoginViewController_DI: UIViewController {
     
     private let rootView = LoginView()
-    private let viewModel: LoginViewModelType
+    private let viewModel: any LoginViewModelType
     
     override func loadView() {
         self.view = rootView
     }
     
-    init(viewModel: LoginViewModelType) {
+    init(viewModel: any LoginViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }

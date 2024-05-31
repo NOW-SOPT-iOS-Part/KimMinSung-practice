@@ -48,6 +48,7 @@
 		4ED058A32C01BE0000F5680E /* LoginViewController_LiveCodingTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED058A22C01BE0000F5680E /* LoginViewController_LiveCodingTemplate.swift */; };
 		4ED058A62C01C75400F5680E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED058A52C01C75400F5680E /* RxCocoa */; };
 		4ED058A82C01C75400F5680E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED058A72C01C75400F5680E /* RxRelay */; };
+		4ED52D0E2C09E00F0033080E /* LoginViewController_Rx_Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED52D0D2C09E00F0033080E /* LoginViewController_Rx_Generic.swift */; };
 		4ED9F3D62BDCC52300712737 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED9F3D52BDCC52300712737 /* Moya */; };
 		4ED9F3D82BDCCBD600712737 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9F3D72BDCCBD600712737 /* Config.swift */; };
 		4ED9F3DA2BDCCF3800712737 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9F3D92BDCCF3800712737 /* NetworkResult.swift */; };
@@ -122,6 +123,7 @@
 		4ED0589E2C01BDBE00F5680E /* LoginViewModel_Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel_Rx.swift; sourceTree = "<group>"; };
 		4ED058A02C01BDE300F5680E /* LoginViewController_Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Rx.swift; sourceTree = "<group>"; };
 		4ED058A22C01BE0000F5680E /* LoginViewController_LiveCodingTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_LiveCodingTemplate.swift; sourceTree = "<group>"; };
+		4ED52D0D2C09E00F0033080E /* LoginViewController_Rx_Generic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController_Rx_Generic.swift; sourceTree = "<group>"; };
 		4ED9F3D72BDCCBD600712737 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4ED9F3D92BDCCF3800712737 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		4ED9F3DB2BDCCF6300712737 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
@@ -320,9 +322,9 @@
 		4EAE8F6C2C09A9580090542F /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				4ED058992C01BD6400F5680E /* LoginViewController_DI.swift */,
 				4EAE8F682C09A8040090542F /* LoginViewModelType.swift */,
 				4EAE8F6A2C09A83E0090542F /* LoginViewModel_DI.swift */,
+				4ED058992C01BD6400F5680E /* LoginViewController_DI.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -333,6 +335,7 @@
 				4ED0589C2C01BD9B00F5680E /* ViewModelType(input-output Pattern).swift */,
 				4ED0589E2C01BDBE00F5680E /* LoginViewModel_Rx.swift */,
 				4ED058A02C01BDE300F5680E /* LoginViewController_Rx.swift */,
+				4ED52D0D2C09E00F0033080E /* LoginViewController_Rx_Generic.swift */,
 			);
 			path = "DI + Rx + input-output Pattern";
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				4E036E8C2BD2AEC00017A9BF /* ColorAssets.swift in Sources */,
 				4ED9F3EB2BDCD12500712737 /* CheckUserInfoViewController.swift in Sources */,
 				4ED9F3D82BDCCBD600712737 /* Config.swift in Sources */,
+				4ED52D0E2C09E00F0033080E /* LoginViewController_Rx_Generic.swift in Sources */,
 				4EAE8F692C09A8040090542F /* LoginViewModelType.swift in Sources */,
 				4E036E862BD2AE600017A9BF /* UIFontExtension.swift in Sources */,
 				4E036E1D2BD23CA80017A9BF /* SceneDelegate.swift in Sources */,

@@ -1,8 +1,8 @@
 //
-//  LoginViewController_Rx.swift
+//  LoginViewController_Rx(Generic).swift
 //  34th-SOPT-iOS-DanggeunCloneCoding
 //
-//  Created by 김민성 on 2024/05/25.
+//  Created by 김민성 on 2024/05/31.
 //
 
 import UIKit
@@ -11,10 +11,10 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-final class LoginViewController_Rx: UIViewController {
+final class LoginViewController_Rx_Generic<T: ViewModelType>: UIViewController {
     
     private let rootView = LoginView()
-    private let viewModel: any ViewModelType
+    private let viewModel: T
     
     private let disposeBag = DisposeBag()
     
@@ -22,7 +22,7 @@ final class LoginViewController_Rx: UIViewController {
         self.view = rootView
     }
     
-    init(viewModel: any ViewModelType) {
+    init(viewModel: T) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -54,7 +54,7 @@ final class LoginViewController_Rx: UIViewController {
         /* 앞서 구한 Input 인스턴스를 이용해 Output 인스턴스를 구하기 */
         let output = self.viewModel.transform(from: input, disposeBag: disposeBag)
         
-        /* 
+        /*
          Output 인스턴스의 속성들을 구독하는 코드 작성
           -> viewModel 의 output은 viewController에서 동작을 구현
          Input 인스턴스의 속성들은 viewModel 내의 transform 메서드 내에서 이루어짐.
