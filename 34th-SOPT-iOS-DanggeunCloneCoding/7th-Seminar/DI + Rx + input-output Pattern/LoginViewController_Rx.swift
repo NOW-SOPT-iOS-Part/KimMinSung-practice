@@ -35,17 +35,19 @@ final class LoginViewController_Rx: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
-        bindViewModel()
+        self.bindViewModel()
     }
     
     private func bindViewModel() {
-        let input = LoginViewModel_Rx.Input(
-            idTextFieldDidChangeEvent: rootView.idTextField.rx.text.asObservable(),
-            passwordTextFieldDidChangeEvent: rootView.passwordTextField.rx.text.asObservable(),
-            loginButtonDidTapEvent: rootView.loginButton.rx.tap.asObservable()
+        
+        
+        let input = LoginViewModel_Rx.Input.init(
+            idTextFieldTextObservable: rootView.idTextField.rx.text.asObservable(),
+            passwordTextFieldTextObservable: rootView.passwordTextField.rx.text.asObservable(),
+            loginButtonTapObservable: rootView.loginButton.rx.tap.asObservable()
         )
         
-        let output = viewModel.transform(from: input, disposeBag: disposeBag)
+        let output = self.viewModel.transform(from: input, disposeBag: disposeBag)
         
         output.isValid.subscribe(onNext: { _ in
             print(#function)
