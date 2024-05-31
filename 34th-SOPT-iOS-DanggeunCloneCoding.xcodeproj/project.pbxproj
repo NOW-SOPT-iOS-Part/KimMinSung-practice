@@ -169,12 +169,12 @@
 		4E036E192BD23CA80017A9BF /* 34th-SOPT-iOS-DanggeunCloneCoding */ = {
 			isa = PBXGroup;
 			children = (
+				4EAE8F512C0982FA0090542F /* LoginView */,
 				4ED058982C01BD4600F5680E /* 7th-Seminar */,
 				4E036E7F2BD2AC640017A9BF /* .gitignore */,
 				4E036E902BD2AEF90017A9BF /* PretendardFont */,
 				4E036E1A2BD23CA80017A9BF /* AppDelegate.swift */,
 				4E036E1C2BD23CA80017A9BF /* SceneDelegate.swift */,
-				4E036E892BD2AEA40017A9BF /* LoginViewController.swift */,
 				4E036E8B2BD2AEC00017A9BF /* ColorAssets.swift */,
 				4E036E1E2BD23CA80017A9BF /* ViewController.swift */,
 				4E036E812BD2AE240017A9BF /* WelcomeViewController.swift */,
@@ -227,6 +227,30 @@
 				4E036E932BD2AF0A0017A9BF /* Pretendard-Black.otf */,
 			);
 			path = PretendardFont;
+			sourceTree = "<group>";
+		};
+		4EAE8F512C0982FA0090542F /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				4EAE8F542C09832B0090542F /* Views */,
+				4EAE8F532C0983100090542F /* ViewControllers */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		4EAE8F532C0983100090542F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E036E892BD2AEA40017A9BF /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4EAE8F542C09832B0090542F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4ED058982C01BD4600F5680E /* 7th-Seminar */ = {
