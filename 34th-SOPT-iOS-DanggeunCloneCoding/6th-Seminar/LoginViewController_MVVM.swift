@@ -1,18 +1,17 @@
 //
-//  LoginViewController_LiveCodingTemplate.swift
+//  LoginViewController_MVVM.swift
 //  34th-SOPT-iOS-DanggeunCloneCoding
 //
-//  Created by 김민성 on 2024/05/25.
+//  Created by 김민성 on 2024/05/31.
 //
 
 import UIKit
 import SnapKit
 
-import RxSwift
-
-final class LoginViewController_LiveCoding: UIViewController {
+final class LoginViewController_MVVM: UIViewController {
     
     private let rootView = LoginView()
+    private let viewModel = LoginViewModel()
     
     override func loadView() {
         self.view = rootView
@@ -23,11 +22,34 @@ final class LoginViewController_LiveCoding: UIViewController {
         
         self.view.backgroundColor = .white
         
+        setTarget()
         bindViewModel()
     }
     
+    private func setTarget() {
+        rootView.loginButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
+    }
     
     private func bindViewModel() {
+        viewModel.isValid = { [weak self] isValid in
+            if isValid {
+                self?.pushToWelcomeVC()
+            }
+        }
+        
+        viewModel.errMessage = { [weak self] err in
+            if let err = err {
+                self?.showToast(err)
+            }
+        }
+    }
+    
+    
+    @objc private func loginButtonDidTap() {
+        viewModel.checkValid(
+            id: rootView.idTextField.text,
+            password: rootView.passwordTextField.text
+        )
     }
     
     private func pushToWelcomeVC() {
@@ -45,5 +67,3 @@ final class LoginViewController_LiveCoding: UIViewController {
         )
     }
 }
-
-
