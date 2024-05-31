@@ -48,7 +48,7 @@ final class LoginView: UIView {
         return tf
     }()
 
-    private lazy var passwordTextField: UITextField = {
+    lazy var passwordTextField: UITextField = {
         let tf = UITextField()
         tf.addLeftPadding()
         tf.placeholder = "비밀번호를 입력해주세요"
