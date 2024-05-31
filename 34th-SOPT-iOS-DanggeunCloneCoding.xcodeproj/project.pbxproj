@@ -37,6 +37,8 @@
 		4ED0589F2C01BDBE00F5680E /* LoginViewModel_Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0589E2C01BDBE00F5680E /* LoginViewModel_Rx.swift */; };
 		4ED058A12C01BDE300F5680E /* LoginViewController_Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED058A02C01BDE300F5680E /* LoginViewController_Rx.swift */; };
 		4ED058A32C01BE0000F5680E /* LoginViewController_LiveCodingTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED058A22C01BE0000F5680E /* LoginViewController_LiveCodingTemplate.swift */; };
+		4ED058A62C01C75400F5680E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED058A52C01C75400F5680E /* RxCocoa */; };
+		4ED058A82C01C75400F5680E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED058A72C01C75400F5680E /* RxRelay */; };
 		4ED9F3D62BDCC52300712737 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED9F3D52BDCC52300712737 /* Moya */; };
 		4ED9F3D82BDCCBD600712737 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9F3D72BDCCBD600712737 /* Config.swift */; };
 		4ED9F3DA2BDCCF3800712737 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9F3D92BDCCF3800712737 /* NetworkResult.swift */; };
@@ -119,8 +121,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED058A82C01C75400F5680E /* RxRelay in Frameworks */,
 				4ED9F3D62BDCC52300712737 /* Moya in Frameworks */,
 				4ED9F3E52BDCD0CE00712737 /* Then in Frameworks */,
+				4ED058A62C01C75400F5680E /* RxCocoa in Frameworks */,
 				4E036E8F2BD2AEEF0017A9BF /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +279,8 @@
 				4E036E8E2BD2AEEF0017A9BF /* SnapKit */,
 				4ED9F3D52BDCC52300712737 /* Moya */,
 				4ED9F3E42BDCD0CE00712737 /* Then */,
+				4ED058A52C01C75400F5680E /* RxCocoa */,
+				4ED058A72C01C75400F5680E /* RxRelay */,
 			);
 			productName = "34th-SOPT-iOS-DanggeunCloneCoding";
 			productReference = 4E036E172BD23CA80017A9BF /* 34th-SOPT-iOS-DanggeunCloneCoding.app */;
@@ -352,6 +358,7 @@
 				4E036E8D2BD2AEEF0017A9BF /* XCRemoteSwiftPackageReference "SnapKit" */,
 				4ED9F3D42BDCC52300712737 /* XCRemoteSwiftPackageReference "Moya" */,
 				4ED9F3E32BDCD0CE00712737 /* XCRemoteSwiftPackageReference "Then" */,
+				4ED058A42C01C75400F5680E /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 4E036E182BD23CA80017A9BF /* Products */;
 			projectDirPath = "";
@@ -777,6 +784,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		4ED058A42C01C75400F5680E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
 		4ED9F3D42BDCC52300712737 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
@@ -800,6 +815,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4E036E8D2BD2AEEF0017A9BF /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		4ED058A52C01C75400F5680E /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ED058A42C01C75400F5680E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		4ED058A72C01C75400F5680E /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ED058A42C01C75400F5680E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
 		};
 		4ED9F3D52BDCC52300712737 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
