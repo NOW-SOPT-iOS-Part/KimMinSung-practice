@@ -1,16 +1,14 @@
 //
-//  LoginViewController.swift
+//  LoginView.swift
 //  34th-SOPT-iOS-DanggeunCloneCoding
 //
-//  Created by 김민성 on 2024/04/19.
+//  Created by 김민성 on 2024/05/31.
 //
 
 import UIKit
-import SnapKit
 
-
-class LoginViewController: UIViewController {
-
+final class LoginView: UIView {
+    
     private lazy var customInputAccessoryView: UIView = {
         let bar = UIToolbar(frame: CGRect(origin: .zero, size: CGSize(width: 100, height: 100)))
         let hideKeyboardButton = UIBarButtonItem(
@@ -37,7 +35,7 @@ class LoginViewController: UIViewController {
         return label
     }()
 
-    private lazy var idTextField: UITextField = {
+    lazy var idTextField: UITextField = {
         let tf = UITextField()
         tf.addLeftPadding()
         tf.placeholder = "아이디를 입력해주세요"
@@ -50,7 +48,7 @@ class LoginViewController: UIViewController {
         return tf
     }()
 
-    private lazy var passwordTextField: UITextField = {
+    lazy var passwordTextField: UITextField = {
         let tf = UITextField()
         tf.addLeftPadding()
         tf.placeholder = "비밀번호를 입력해주세요"
@@ -64,37 +62,47 @@ class LoginViewController: UIViewController {
         return tf
     }()
 
-    private lazy var loginButton: UIButton = {
+    lazy var loginButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor.dangGeunOrange
         button.setTitle("로그인하기", for: UIControl.State.normal)
         button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
-        button.addTarget(self, action: #selector(loginButtonDidTap), for: UIControl.Event.touchUpInside)
+        //button.addTarget(self, action: #selector(loginButtonDidTap), for: UIControl.Event.touchUpInside)
         button.clipsToBounds = true
         button.layer.cornerRadius = 13
         button.layer.cornerCurve = .continuous
         return button
     }()
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.setupUI()
-        self.configureHierarchy()
-        self.setLayout()
-    }
-
-
-    private func setupUI() {
-        self.view.backgroundColor = .systemBackground
-    }
-
-    private func configureHierarchy() {
-        [titleLabel, idTextField, passwordTextField, loginButton].forEach { self.view.addSubview($0) }
-    }
+    
+    lazy var signUpButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColor.dangGeunOrange
+        button.setTitle("회원가입하기", for: UIControl.State.normal)
+        button.titleLabel?.font = UIFont.pretendardFont(ofSize: 18, weight: 700) //bold
+        //button.addTarget(self, action: #selector(signUpButtonDidTap), for: UIControl.Event.touchUpInside)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 13
+        button.layer.cornerCurve = .continuous
+        return button
+    }()
     
     
-    private func setLayout() {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.configureViewHierarchy()
+        self.setConstraints()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func configureViewHierarchy() {
+        [titleLabel, idTextField, passwordTextField, loginButton, signUpButton].forEach { self.addSubview($0) }
+    }
+    
+    private func setConstraints() {
         [self.titleLabel, self.idTextField, self.passwordTextField, self.loginButton].forEach { view in
             view.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -125,6 +133,12 @@ class LoginViewController: UIViewController {
             btn.height.equalTo(58)
         }
         
+        self.signUpButton.snp.makeConstraints { btn in
+            btn.centerX.equalToSuperview()
+            btn.top.equalTo(self.loginButton.snp.bottom).offset(30)
+            btn.width.equalTo(335)
+            btn.height.equalTo(58)
+        }
         /*
         NSLayoutConstraint.activate(
             
@@ -153,31 +167,8 @@ class LoginViewController: UIViewController {
          */
     }
     
-    
-    
-    @objc private func loginButtonDidTap() {
-        self.view.endEditing(true)
-        //self.presentToWelcomeVC()
-        self.pushToWelcomeVC()
-    }
-
     @objc private func keyboardHideButtonTapped() {
-        self.view.endEditing(true)
+        self.endEditing(true)
     }
-
-
-    private func presentToWelcomeVC() {
-        let welcomeViewController = WelcomeViewController()
-        welcomeViewController.modalPresentationStyle = .formSheet
-        welcomeViewController.id = self.idTextField.text
-        self.present(welcomeViewController, animated: true)
-    }
-
-
-    private func pushToWelcomeVC() {
-        let welcomeViewController = WelcomeViewController()
-        welcomeViewController.id = self.idTextField.text
-        self.navigationController?.pushViewController(welcomeViewController, animated: true)
-    }
-
+    
 }
