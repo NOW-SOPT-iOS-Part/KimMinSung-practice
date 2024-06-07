@@ -11,10 +11,10 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-final class LoginViewController_Rx_Generic<T: ViewModelType>: UIViewController {
+final class LoginViewController_Rx_Generic: UIViewController {
     
     private let rootView = LoginView()
-    private let viewModel: T
+    private let viewModel: LoginViewModel_Rx
     
     private let disposeBag = DisposeBag()
     
@@ -22,7 +22,7 @@ final class LoginViewController_Rx_Generic<T: ViewModelType>: UIViewController {
         self.view = rootView
     }
     
-    init(viewModel: T) {
+    init(viewModel: LoginViewModel_Rx) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -49,9 +49,8 @@ final class LoginViewController_Rx_Generic<T: ViewModelType>: UIViewController {
             idTextFieldTextObservable: rootView.idTextField.rx.text.asObservable(),
             passwordTextFieldTextObservable: rootView.passwordTextField.rx.text.asObservable(),
             loginButtonTapObservable: rootView.loginButton.rx.tap.asObservable()
-        )
+        )// as! T.Input
         
-        /* 앞서 구한 Input 인스턴스를 이용해 Output 인스턴스를 구하기 */
         let output = self.viewModel.transform(from: input, disposeBag: disposeBag)
         
         /*

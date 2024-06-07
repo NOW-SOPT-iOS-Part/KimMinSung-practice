@@ -14,7 +14,7 @@ import RxCocoa
 final class LoginViewController_Rx: UIViewController {
     
     private let rootView = LoginView()
-    private let viewModel: any ViewModelType
+    private let viewModel: LoginViewModel_Rx
     
     private let disposeBag = DisposeBag()
     
@@ -22,7 +22,7 @@ final class LoginViewController_Rx: UIViewController {
         self.view = rootView
     }
     
-    init(viewModel: any ViewModelType) {
+    init(viewModel: LoginViewModel_Rx) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -42,6 +42,13 @@ final class LoginViewController_Rx: UIViewController {
     private func bindViewModel() {
         
         /*
+         이 코드 안적으면 아래에서 에러뜨면서 차라리 제네릭 타입을 쓰라고 경고를 준다.
+         그래서 에러를 지우려고 일단 bindViewModel 안에서 강제 타입캐스팅하긴 했는데
+         이러면 의존성 주입한 의미가 없는 것 같아보임... -> 차라리 제네릭을 써 보자!
+         */
+        let viewModel = self.viewModel //as! LoginViewModel_Rx
+        
+        /*
          viewModel의 transform 메서드의 매개변수로 들어갈 Input 타입의 인스턴스를 view controller에서 생성.
          여기서 생성한 Input 타입의 인스턴스를 이용해 output 인스턴스를 구한다. (viewModel의 transform 메서드의 반환값)
          */
@@ -52,7 +59,12 @@ final class LoginViewController_Rx: UIViewController {
         )
         
         /* 앞서 구한 Input 인스턴스를 이용해 Output 인스턴스를 구하기 */
-        let output = self.viewModel.transform(from: input, disposeBag: disposeBag)
+        /*
+         위의 viewModel에서 타입캐스팅을 하지 않으면 아래 코드에서 에러가 난다.
+         대충 'any ViewModelType' 타입인 값( == viewModel)의 멤버 'transform' 메서드를 사용할 수 없다는 이야기인데,
+         이는 
+         */
+        let output = viewModel.transform(from: input, disposeBag: disposeBag)
         
         /* 
          Output 인스턴스의 속성들을 구독하는 코드 작성
